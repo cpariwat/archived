@@ -1,0 +1,12 @@
+<svg width="66" height="66" data-percent="100" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    donut
+  </title>
+  <g transform="translate(3 2.5)" stroke-width="6" fill="none" fill-rule="evenodd">
+    <circle stroke="#EAEAEA" cx="30" cy="30" r="30"/>
+    <circle class="front-ring" stroke="#FFE700" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="314,314,314,314" stroke-dashoffset="314" transform="rotate(-90,30,30)" cx="30" cy="30" r="30"/>
+     <text font-family="Raleway" font-size="20" font-weight="normal" fill="#444444">
+        <tspan x="16" y="37" id="lang-inside"></tspan>
+    </text>
+  </g>
+</svg>
