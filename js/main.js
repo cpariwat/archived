@@ -10,7 +10,7 @@ $(function () { // wait for document ready
           for(var i=0; i<slides.length - 1; i++){
             slides[i].style.height = null
             if(slides[i].offsetHeight <  window.innerHeight){
-                slides[i].style.height = window.innerHeight+"px";
+                slides[i].style.height = (window.innerHeight+20)+"px";
             }
           }
       }
@@ -76,9 +76,9 @@ $(function () { // wait for document ready
         var totalWidth = skillItems[index].querySelector(".skill-range").getAttribute("width");
         var skillPercentage = skillItems[index].dataset.skillPercentage;
         var thisItemWidth = totalWidth * (skillPercentage / 100);
-        
-        var tween1 = TweenLite.from(skillItems[index].querySelectorAll("svg.skill-range .percent"), 1, {width: "0"});
-        var tween2 = TweenLite.to(skillItems[index].querySelectorAll("svg.skill-range .percent"), 1, {width: thisItemWidth});
+
+        var tween1 = TweenLite.from(skillItems[index].querySelectorAll("svg.skill-range .percent"), 1, {attr:{width:0}, ease: Expo.easeIn});
+        var tween2 = TweenLite.to(skillItems[index].querySelectorAll("svg.skill-range .percent"), 1, {attr:{width:thisItemWidth}, ease: Expo.easeIn});
   
         var skillUpTimeLine = new TimelineLite().add(tween1).add(tween2);
         
@@ -117,8 +117,8 @@ $(function () { // wait for document ready
         var strokeOffset = (188 - (progress * 188 / 100));
         var zoomInStart = TweenLite.from(languangeDonuts[i],1, {scaleX:0, scaleY:0});
         var zoomInEnd = TweenLite.to(languangeDonuts[i],1, {scaleX:1, scaleY:1});
-        var animateRingStartTween = TweenLite.from(languangeDonuts[i].querySelectorAll(".front-ring"), 1, {'stroke-dashoffset': "188"});
-        var animateRingEndTween = TweenLite.to(languangeDonuts[i].querySelectorAll(".front-ring"), 1, {'stroke-dashoffset': strokeOffset});
+        var animateRingStartTween = TweenLite.from(languangeDonuts[i].querySelectorAll(".front-ring"), 1, {'stroke-dashoffset': "188", ease: Back.easeIn.config(1.7)});
+        var animateRingEndTween = TweenLite.to(languangeDonuts[i].querySelectorAll(".front-ring"), 1, {'stroke-dashoffset': strokeOffset, ease: Back.easeIn.config(1.7)});
         var animateRingTl = new TimelineLite().add(zoomInStart).add(zoomInEnd).add(animateRingStartTween).add(animateRingEndTween);
 
         new ScrollMagic.Scene({
