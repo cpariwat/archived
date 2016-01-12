@@ -47,7 +47,6 @@ $(function () { // wait for document ready
               triggerHook: 'onEnter'
           })
           .setPin(slides[0])
-          .addIndicators()
           .addTo(controller);
 
       // Animate works section
@@ -57,7 +56,6 @@ $(function () { // wait for document ready
               triggerHook: 'onEnter'
           })
           .setPin(slides[1])
-          .addIndicators()
           .addTo(controller);
 
 
@@ -70,7 +68,6 @@ $(function () { // wait for document ready
           })
           .removePin()
           .setPin(slides[2])
-          .addIndicators()
           .addTo(controller);
       
       var skillItems = document.querySelectorAll("#skills .skill-item");
@@ -91,7 +88,6 @@ $(function () { // wait for document ready
           duration: 500
         })
         .setTween(skillUpTimeLine)
-        .addIndicators()
         .addTo(controller);
 
       }
@@ -103,7 +99,6 @@ $(function () { // wait for document ready
               triggerHook: 'onEnter'
           })
           .setPin(slides[3])
-          .addIndicators()
           .addTo(controller);
 
       // Animate Languages Section
@@ -112,7 +107,6 @@ $(function () { // wait for document ready
               triggerHook: 'onEnter'
           })
           .setPin(slides[4])
-          .addIndicators()
           .addTo(controller);
       
       var languangeDonuts = document.querySelectorAll(".language-ring");
@@ -133,7 +127,6 @@ $(function () { // wait for document ready
           duration: 400
         })
         .setTween(animateRingTl)
-        .addIndicators()
         .addTo(controller);
       }
       
@@ -143,7 +136,6 @@ $(function () { // wait for document ready
               triggerHook: 'onEnter'
           })
           .setPin(slides[5])
-          .addIndicators()
           .addTo(controller);
 
     }
